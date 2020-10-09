@@ -20,4 +20,11 @@ header .top-bg {
 	bottom: 50px;
 	right: 30px;
 }
+
+.main-banner {
+	background-image: url(../../static/bg-main.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom right;
+}
 /* purgecss end ignore */
