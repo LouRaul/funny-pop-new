@@ -15,16 +15,11 @@ button:focus {
 header .top-bg {
 	background-image: url(../../static/top-repeat.svg);
 }
-
-.whatsapp-icon {
-	bottom: 50px;
-	right: 30px;
-}
-
-.main-banner {
-	background-image: url(../../static/bg-main.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: bottom right;
+@media (max-width: 1024px) {
+	.main-banner {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url(../../static/bg-main.jpg);
+		background-size: cover;
+	}
 }
 /* purgecss end ignore */
