@@ -4,41 +4,86 @@ title: Funy Pop | Pochoclos Gourmet
 ---
 
 <!--Navegacion-->
-    <header class="mx-auto mb-4" >
+    <header class="mx-auto lg:mb-4" >
         <!--top-pattern-->
             <div class="bg-repeat-x top-bg h-12"></div>
         
         <!-- Navigation-->
-            
-                <nav class="container mx-auto">
+                <nav class="container mx-auto px-4 lg:py-2" x-data="{isOpen : false}">
                         <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                             <div class="flex items-center justify-between w-full lg:w-auto">
                                 <a class="lg:hidden" href="#" aria-label="Home">
-                                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Logo">
+                                    <img class="h-16 w-auto" src="/static/SimpleLogo.svg" alt="Logo">
                                 </a>
                                 <div class="-mr-2 flex items-center lg:hidden">
-                                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
+                                    <button @click="isOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-full text-pink-700 hover:text-pink-500 hover:bg-pink-100 focus:outline-none focus:bg-pink-100 focus:text-pink-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                     </svg>
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="isOpen">
+                                <div class="rounded-lg shadow-md">
+                                    <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+                                        <div class="px-5 pt-4 flex items-center justify-between">
+                                            <div>
+                                                <img class="h-12 w-auto" src="/static/SimpleLogo.svg" alt="Funnypop logo">
+                                            </div>
+                                            <div class="-mr-2">
+                                                <button @click="isOpen = false" @click.away="isOpen = false" type="button" class="inline-flex items-center justify-center p-2 rounded-full text-pink-700 hover:text-pink-500 hover:bg-pink-100 focus:outline-none focus:bg-pink-100 focus:text-pink-500 transition duration-150 ease-in-out" aria-label="Close menu">
+                                                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="px-2 pt-2 pb-3">
 
+                                            <a href="#presentaciones" class="hover:bg-pink-100 text-center block px-3 py-2 rounded-md text-base md:text-xl font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Presentaciones</a>
+                                
+                                            <a href="#sabores" class="hover:bg-pink-100 text-center block px-3 py-2 rounded-mdtext-base md:text-xl  font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Sabores</a>
+                                    
+                                            <a href="#eventos" class="hover:bg-pink-100 text-center block px-3 py-2 rounded-md text-base md:text-xl  font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Eventos</a>
+                                    
+                                            <a href="#nosotros" class="hover:bg-pink-100 text-center block px-3 py-2 rounded-md text-base md:text-xl font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Nosotros</a>
+                                    
+                                            <a href="#contacto" class="hover:bg-pink-100 text-center block px-3 py-2 rounded-md text-base md:text-xl  font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Contacto</a>
+                                        </div>
+                                        <div class="flex justify-center pb-4 px-3">
+                                            <a href="https://www.instagram.com/funnypop.ar/?hl=es-la" aria-label="Instagram" class="p-2 hover:bg-pink-100 hover:shadow rounded-full">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.34 22H4.66C3.19 22 2 20.81 2 19.34V4.66C2 3.19 3.19 2 4.66 2H19.33C20.81 2 22 3.19 22 4.66V19.33C22 20.81 20.81 22 19.34 22Z" fill="#FED7E2" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 12C16 14.21 14.21 16 12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12Z" fill="#D53F8C" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 5.5C19 5.78 18.78 6 18.5 6C18.22 6 18 5.78 18 5.5C18 5.22 18.22 5 18.5 5C18.78 5 19 5.22 19 5.5Z" fill="#D53F8C" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+
+                                    <a href="https://www.facebook.com/funnypop.ar" aria-label="Facebook" class="ml-4 p-2 hover:bg-pink-100 hover:shadow rounded-full">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.34 22H4.66C3.19 22 2 20.81 2 19.34V4.66C2 3.19 3.19 2 4.66 2H19.33C20.81 2 22 3.19 22 4.66V19.33C22 20.81 20.81 22 19.34 22Z" fill="#FED7E2" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 17.9998V8.34978C12 6.29978 13.64 5.65978 15.28 6.15978" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.5 11H14.5" stroke="#702459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="hidden lg:block">
                             <div class="flex items-center justify-evenly py-2">
-                                <a href="#presentaciones" class="text-base md:text-xl font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Presentaciones</a>
+                                <a href="#presentaciones" class="hover:bg-pink-100 p-2 px-4 rounded-lg text-base md:text-xl font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Presentaciones</a>
                                 
-                                <a href="#sabores" class="text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Sabores</a>
+                                <a href="#sabores" class="hover:bg-pink-100 p-2 px-4 rounded-lg text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Sabores</a>
                                     
-                                <a href="#eventos" class="text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Eventos</a>
+                                <a href="#eventos" class="hover:bg-pink-100 p-2 px-4 rounded-lg text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out z-30">Eventos</a>
                                     
-                                <img src="/static/fp-logo.png" alt="Logo de Funny Pop" class="absolute self-start z-20 mt-4 pt-2">
+                                <img src="/static/LogoFunnyPop.svg" alt="Logo de Funny Pop" class="absolute self-start z-20 mt-4 pt-4">
                                     
-                                <a href="#nosotros" class="text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Nosotros</a>
+                                <a href="#nosotros" class="hover:bg-pink-100 p-2 px-4 rounded-lg text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out z-30">Nosotros</a>
                                     
-                                <a href="#contacto" class="text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Contacto</a>
+                                <a href="#contacto" class="hover:bg-pink-100 p-2 px-4 rounded-lg text-base md:text-xl ml-8 font-bold text-gray-800 hover:text-pink-700 transition duration-150 ease-in-out">Contacto</a>
                                     
                                 <div class="flex">
                                     <a href="https://www.instagram.com/funnypop.ar/?hl=es-la" aria-label="Instagram" class="p-2 hover:bg-pink-100 hover:shadow rounded-full">
@@ -63,40 +108,7 @@ title: Funy Pop | Pochoclos Gourmet
             </div>
 
         <!--Mobile Navigation-->
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
-                <div class="hidden rounded-lg shadow-md">
-                    <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
-                        <div class="px-5 pt-4 flex items-center justify-between">
-                            <div>
-                                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="">
-                            </div>
-                            <div class="-mr-2">
-                                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
-                                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="px-2 pt-2 pb-3">
-
-                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Product</a>
-                
-                            <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Features</a>
-                
-                            <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Marketplace</a>
-                
-                            <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Company</a>
-                
-                        </div>
-                        <div>
-                            <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out" role="menuitem">
-                            Log in
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
     </header>
 
 <main id="main" class="mx-auto">
