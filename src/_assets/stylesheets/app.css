@@ -43,4 +43,9 @@ header .top-bg {
 		background-size: cover;
 	}
 }
+
+.footer-pattern {
+	background-image: url(../../static/Footer\ pattern.svg);
+}
+
 /* purgecss end ignore */
