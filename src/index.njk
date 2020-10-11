@@ -23,7 +23,7 @@ title: Funy Pop | Pochoclos Gourmet
                                     </button>
                                 </div>
                             </div>
-                            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="isOpen">
+                            <div class="z-40 absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="isOpen">
                                 <div class="rounded-lg shadow-md">
                                     <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
                                         <div class="px-5 pt-4 flex items-center justify-between">
@@ -128,7 +128,7 @@ title: Funy Pop | Pochoclos Gourmet
         <div class="container mx-auto">
             <h2 class="px-4 md:px-0 text-center md:text-left text-3xl text-pink-900 font-bold tracking-tight uppercase">Elegi la <span class="text-pink-700">presentación</span> que se ajusta a vos.</h2>
             
-            <div class="grid grid-flow-row md:grid-flow-col gap-8 mt-4">
+            <div class="grid grid-flow-row md:grid-flow-col gap-8 mt-12">
                 <div>
                     <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl pb-8 mx-8 md:mx-0">
                         <img class="w-full" src="/static/baldes.jpg" alt="Pochoclos en baldes de varios sabores">
@@ -156,25 +156,35 @@ title: Funy Pop | Pochoclos Gourmet
     </section>
 
 <!--Sabores-->
-    <section id="sabores" class="mt-10 py-20">
+    <section id="sabores" class="mt-10 py-20 ">
         <div class="container mx-auto">
             <h2 class="px-4 md:px-0 text-center md:text-left text-3xl text-pink-900 font-bold tracking-tight uppercase">Descubri nuestros <span class="text-pink-700">sabores gourmet.</span></h2>
-
-            <div class="grid grid-flow-col sm:grid-flow-row md:grid-flow-col-dense lg:grid-flow-row-dense xl:grid-flow-col">
-                <div class="mt-8"> 
-                    <ul class="flex flex-wrap px-12 justify-center">
-                        <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4" >Dulces</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Pizza</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Salado</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Queso</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Coco</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Limón</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Vainilla</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Acaramelado</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Chocolate</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Frutos Rojos</li>
-                            <li class="bg-pink-100 border-2 border-pink-400 px-6 py-3 rounded-full shadow mx-2 mb-4">Cream & Cookies</li>
+            <div class="flex flex-col md:flex-row mt-12">
+                <div class="mr-4"> 
+                    <ul class="flex flex-wrap px-4 justify-center md:justify-end align-middle mb-8 md:mb-0">
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4" >Dulces</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Pizza</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Salado</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Queso</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Coco</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Limón</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Vainilla</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Acaramelado</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Chocolate</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Frutos Rojos</li>
+                        <li class="bg-pink-100 border-2 border-pink-400 px-4 py-2 rounded-full shadow mx-2 mb-4">Cream & Cookies</li>
                     </ul>
+                </div>
+
+                <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2">
+                    <img src="/static/neutro.jpg" alt="Pochoclos de cerca sabor neutro">
+                    <img src="/static/frutos.jpg" alt="Pochoclos de cerca sabor Frutos">
+                    <img src="/static/Pizza.jpg" alt="Pochoclos de cerca sabor Pizza">
+                    <img  src="/static/queso.jpg" alt="Pochoclos de cerca sabor Queso">
+                    <img  src="/static/caramelo.jpg" alt="Pochoclos de cerca sabor Caramelo">
+                    <img  src="/static/baldes-caidos.jpg" alt="Pochoclos de cerca sabor Caramelo">
+                    
+                
                 </div>
             
             </div>
@@ -184,10 +194,10 @@ title: Funy Pop | Pochoclos Gourmet
 <!--Eventos-->
     <section id="eventos" class="mt-10 py-20 bg-pink-100 w-full">
         <div class="container mx-auto">
-            <h2 class="text-3xl text-pink-900 font-bold tracking-tight uppercase">Hace tu <span class="text-pink-700">evento</span> diferente</h2>
-            <div class="grid grid-flow-row md:grid-flow-col mt-8 gap-5">
-                <img class="border-gray-100 border-8 shadow-lg" src="/static/eventos.jpg" alt="Muchas manos agarrando pochoclos">
-                <div>
+            <h2 class="px-4 md:px-0 text-center md:text-left text-3xl text-pink-900 font-bold tracking-tight uppercase">Hace tu <span class="text-pink-700">evento</span> diferente</h2>
+            <div class="grid grid-flow-row md:grid-flow-col mt-8 gap-5 mx-8 md:mx-0">
+                <img class="border-gray-100 border-8 shadow-lg " src="/static/eventos.jpg" alt="Muchas manos agarrando pochoclos">
+                <div class="">
                     <p class="text-xl text-gray-800">Llevamos nuestros exclusivos sabores gourmet a tu evento para hacerlo unico.</p>
                     <a href="#contacto" class="text-pink-700 text-lg uppercase underline font-bold">Reserva tu fecha</a>
                 </div>
