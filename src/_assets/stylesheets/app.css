@@ -36,7 +36,6 @@ header .top-bg {
 	background-repeat: no-repeat;
 	background-position: top -90px right;
 	background-size: 900px;
-	height: 500px;
 }
 
 @media (max-width: 1024px) {
