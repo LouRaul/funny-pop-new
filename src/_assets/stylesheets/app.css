@@ -55,4 +55,8 @@ header .top-bg {
 	background-image: url(../../static/Footer\ pattern.svg);
 }
 
+[x-cloak] {
+	display: none !important;
+}
+
 /* purgecss end ignore */
